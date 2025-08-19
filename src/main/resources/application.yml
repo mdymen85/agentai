@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: agentai
+  ai:
+    ollama:
+#      chat:
+#        enabled: true
+#        base-url: http://localhost:11434
+#        model: my-sql-assistant
+      options:
+        model: llama3
+
