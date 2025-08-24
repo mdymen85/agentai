@@ -1,0 +1,1 @@
+curl --location --request GET 'localhost:8080/prompt?message=give me the list of users'

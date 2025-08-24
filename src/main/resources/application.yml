@@ -9,4 +9,9 @@ spring:
 #        model: my-sql-assistant
       options:
         model: llama3
+  datasource:
+    url: jdbc:mysql://localhost:3306/agentai_db?useSSL=false&serverTimezone=UTC
+    username: mdymen85
+    password: mdymen_pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
