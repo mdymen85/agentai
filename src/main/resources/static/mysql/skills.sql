@@ -1,0 +1,10 @@
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('0eebd738-d7ca-4b43-8534-5aa5edecb191', 'Problem Solving', 'Leadership', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('12a9e14b-633a-4720-b47c-41f20ba1cc71', 'Leadership', 'Technical', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('19f805c8-ed96-488c-ae51-7ad50373df55', 'Collaboration', 'Leadership', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('283ce7da-5700-443e-8d1e-355b2a84d2ec', 'Adaptability', 'Technical', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('67098832-3794-474f-bcc5-02650b527ff9', 'Communication', 'Core', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('67829ad2-9e1c-499d-8268-6cb6870e9f21', 'Project Management', 'Leadership', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('ba390f26-16ab-4f9a-99d6-430fff45cce3', 'Analytical Thinking', 'Leadership', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('da65d8c6-5577-4803-8cfa-ab898a62b08d', 'Time Management', 'Leadership', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('e0d91fe3-8170-4c0c-9259-d2bd73060107', 'Technical Expertise', 'Execution', '');
+INSERT INTO agentai_db.skills (skill_id, skill_name, skill_category, description) VALUES ('ec1bce22-ed25-4b13-b702-e48543efa3b1', 'Creativity', 'Core', '');

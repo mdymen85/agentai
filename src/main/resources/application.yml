@@ -1,12 +1,42 @@
 spring:
   application:
     name: agentai
+  jpa:
+    show-sql: true
   ai:
-    ollama:
-#      chat:
-#        enabled: true
-#        base-url: http://localhost:11434
-#        model: my-sql-assistant
-      options:
-        model: llama3
+    bedrock:
+      converse:
+        chat:
+          options:
+            model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+          enabled: true
+#          base-url: https://bedrock.us-east-1.amazonaws.com
+#          model: spring.ai.bedrock.converse.chat.options.model=us.anthropic.claude-3-7-sonnet-20250219-v1:0
+      aws:
+        region: us-west-2
+        access-key:
+        secret-key:
 
+#    ollama:
+##      chat:
+##        enabled: true
+##        base-url: http://localhost:11434
+##        model: my-sql-assistant
+#      options:
+#        model: llama3
+  datasource:
+    url: jdbc:mysql://localhost:3306/agentai_db?useSSL=false&serverTimezone=UTC
+    username: mdymen85
+    password: mdymen_pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+logging:
+  level:
+    org:
+      springframework:
+        ai: DEBUG
+    # See Spring AI's Bedrock-specific actions
+    org.springframework.ai.bedrock: DEBUG
+    # See the underlying AWS SDK calls, including request IDs
+    software.amazon.awssdk: DEBUG

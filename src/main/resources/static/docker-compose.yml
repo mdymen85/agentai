@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mysql_db:
+    image: mysql:8
+    container_name: agentai-mysql
+    restart: always
+    environment:
+      # Set the root password (required by MySQL)
+      MYSQL_ROOT_PASSWORD: mdymen_pass
+
+      # (Optional) The database name and user created by init.sql
+      # These variables don't strictly "read" from the file, but are
+      # good practice to keep them consistent with your init.sql.
+      MYSQL_DATABASE: agentai_db
+      MYSQL_USER: mdymen85
+      MYSQL_PASSWORD: mdymen_pass
+
+    ports:
+      # Map the host port 3306 to the container's port 3306
+      - "3306:3306"
+
+    volumes:
+      # This is the crucial part. It maps your local init.sql file
+      # into the /docker-entrypoint-initdb.d/ directory inside the container.
+      # The MySQL image is configured to automatically execute any *.sql
+      # or *.sh files in this directory on first start.
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+      # (Optional) Persist the data in a named volume
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  # Define the named volume for persistent storage
+  mysql_data:
